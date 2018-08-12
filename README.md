@@ -32,6 +32,6 @@ node index.js
 代码中的两个配置
 
 ```
-const THRESHOLD_PIXELS_COUNT = 100000;//最大可容忍不同像素点数（相互匹配不代表图片像素完全一致，而是不同的像素点数量在可容忍范围内容，根据视频本身是否有内容简单修改，比如添加了水印等等）
+const THRESHOLD_PIXELS_COUNT = 100000;//最大可容忍不同像素点数（相互匹配不代表图片像素完全一致，而是不同的像素点数量在可容忍范围内容）
 const PIXEL_MATCH_THRESHOLD = 0.1;//PIXEL_MATCH点的比对严格程度（0-1），值越小比对越严格发现的不同像素点越多。
 ```
