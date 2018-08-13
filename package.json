@@ -12,6 +12,7 @@
     "async": "^2.6.1",
     "fs": "0.0.1-security",
     "jpeg-js": "^0.3.4",
+    "mapred": "^0.1.0",
     "pixelmatch": "^4.0.2",
     "pngjs": "^3.3.3",
     "shelljs": "^0.8.2"
