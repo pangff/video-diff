@@ -14,9 +14,9 @@ const getCropInfo=(path)=>{
       let resolutionArray = resolution.split("x");
       let width = resolutionArray[0];
       let height = resolutionArray[1];
-      let startX = width/2-50;
-      let startY = height/2-50;
-      let crop = `100:100:${startX}:${startY}`
+      let startX = width/2-10;
+      let startY = height/2-10;
+      let crop = `20:20:${startX}:${startY}`
       resolve(crop)
     });
   })
