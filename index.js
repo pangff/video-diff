@@ -48,6 +48,7 @@ const exportFrameImages = (path,output,needResolution,selectFrame,crop)=>{
   })
 }
 
+let startTime = Date.now();
 (async ()=>{
   let infoResults = await Promise.all([
     getCropInfo(`${videoPath}/origin.mp4`),
@@ -65,11 +66,12 @@ const exportFrameImages = (path,output,needResolution,selectFrame,crop)=>{
   let useFrameCount = originFrameCount-testFrameCount;
 
   let exprotResults = await Promise.all([
-    exportFrameImages(`${videoPath}/origin.mp4`,`${distOriginPath}/p%04d.jpg`,'100x100',null,originCrop),
-    exportFrameImages(`${videoPath}/test.mp4`,`${distTestPath}/${useFrameCount}-p%04d.jpg`,'100x100','eq(n,1)',testCrop)
+    exportFrameImages(`${videoPath}/origin.mp4`,`${distOriginPath}/p%04d.bmp`,'100x100',null,originCrop),
+    exportFrameImages(`${videoPath}/test.mp4`,`${distTestPath}/${useFrameCount}-p%04d.bmp`,'100x100','eq(n,1)',testCrop)
   ])
 
   console.log(exprotResults)
+  console.log('exprt use time:'+(Date.now()-startTime))
 })();
 
 
